@@ -1,19 +1,38 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { GiHummingbird } from "react-icons/gi";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
+  const [navbar, setNavbar] = useState(false);
   return (
     <div className="py-5 px-0 flex justify-between items-center fixed z-50 bg-white top-0 w-[80%] mx-auto">
-      <GiHummingbird className=" w-[30px] h-[30px] md:w-[40px] lg:w-[50px] md:h-[40px] lg:h-[50px] text-blue-500" />
-      <ul className="flex md:gap-[20px] sm:gap-[10px]  lg:gap-[30px] text-gray-700 md:text-[14px] lg:text-[18px] ">
-        <li>Home</li>
-        <li>Pages</li>
-        <li>About us</li>
-        <li>Category</li>
-        <li>Contact</li>
-      </ul>
+      <GiHummingbird className=" w-[40px] h-[40px] md:w-[40px] lg:w-[50px] md:h-[40px] lg:h-[50px] text-blue-500" />
+      <div className=" ">
+        <ul
+          className={` cursor-pointer absolute ml-[-47px] sm:ml-[90px] mt-[27px] px-20 py-28 md:px-0 md:py-0 bg-yellow-300 md:bg-inherit mb-14 md:mt-[-12px] md:ml-[-160px] md:flex  md:text-[16px] lg:text-[18px] md:gap-[15px] lg:gap-[30px] ${
+            navbar ? " md:gap-[20px] text-gray-700  block" : "hidden"
+          } `}
+        >
+          <li className=" mb-5 md:mb-0 " onClick={() => setNavbar(!navbar)}>
+            Home
+          </li>
+          <li className=" mb-5 md:mb-0 " onClick={() => setNavbar(!navbar)}>
+            Pages
+          </li>
+          <li className=" mb-5 md:mb-0 " onClick={() => setNavbar(!navbar)}>
+            About us
+          </li>
+          <li className=" mb-5 md:mb-0 " onClick={() => setNavbar(!navbar)}>
+            Category
+          </li>
+          <li className=" mb-5 md:mb-0 " onClick={() => setNavbar(!navbar)}>
+            Contact
+          </li>
+        </ul>
+      </div>
       <div className="icons">
-        <div className=" md:max-w-sm lg:max-w-md mx-auto">
+        <div className="md:block hidden  lg:max-w-md mx-auto">
           <div className="relative flex items-center sm:w-[60%] sm:h-8 md:w-[80%] lg:w-full md:h-12 rounded-lg focus-within:shadow-lg border border-blue-500 bg-white overflow-hidden">
             <div className="grid place-items-center h-full w-12 text-gray-300">
               <svg
@@ -39,6 +58,20 @@ const Navbar = () => {
               placeholder="Search something.."
             />
           </div>
+        </div>
+        {/* HAMBURGER BUTTON FOR MOBILE */}
+        {/* <div className="md:hidden"> */}
+        <div className="md:hidden  ">
+          <button
+            className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+            onClick={() => setNavbar(!navbar)}
+          >
+            {navbar ? (
+              <XMarkIcon className=" h-4 w-4 sm:h-6 sm:w-6'" />
+            ) : (
+              <Bars3Icon className=" h-4 w-4 sm:h-6 sm:w-6'" />
+            )}
+          </button>
         </div>
       </div>
     </div>
