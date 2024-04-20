@@ -10,11 +10,9 @@ export default function Modal2({ isVisible, onClose, children }: ModalProps) {
   if (!isVisible) return null;
 
   return (
-    <div className="flex items-center justify-center  ">
-      {/* <div className="  py-[40px]  bg-[EDEDED] bg-green-500 fixed bottom-0 pl-[120px] pr-[40px] "> */}
-      <div className="  py-[40px]  bg-[EDEDED] bg-green-500  pl-[120px] pr-[40px] ">
-        {" "}
-        {children}{" "}
+    <div className="flex items-center justify-center p-12 ">
+      <div className="  py-[10px]  fixed bottom-0 pl-[70px] pr-[70px]   lg:pl-[150px] lg:pr-[150px]  xl:pl-[250px] xl:pr-[250px] 2xl:pl-[350px] 2xl:pr-[350px] ">
+        {children}
       </div>
     </div>
   );
