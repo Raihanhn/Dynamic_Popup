@@ -1,33 +1,49 @@
 "use client";
 import { Fragment, useState } from "react";
 import Modal from "./Modal";
+import { MdAddCircle } from "react-icons/md";
+import Modal2 from "./Modal2";
+import { HiMinusCircle } from "react-icons/hi";
 
 const Popup = () => {
   const [showModal, setShowModal] = useState(true);
+  const [showModal2, setShowModal2] = useState(false);
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <Fragment>
-      {/* Your main content */}
-      <div className=" p-10 text-center ">
-        <button
-          onClick={() => setShowModal(true)}
-          className=" text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium text-sm rounded-lg px-5 py-2.5 text-center mr-5 mt-2 "
-        >
-          Text Modal
-        </button>
-      </div>
-
       {/* The modal */}
       <Modal isVisible={showModal} onClose={() => setShowModal(false)}>
-        {/* <div className="p-6 bg-[#EDEDED] fixed bottom-0 left-0 right-0"></div> */}
-        <div className="py-[10px] px-[25px] bg-[#EDEDED] fixed bottom-0 left-[350px] right-[350px] flex ">
-          <div className=" pt-2 pb-2 text-[18px] font-semibold text-[#73327E] w-[41%] ">
+        <div className="flex items-center justify-between p-2   ">
+          <div className=" text-[12px] lg:text-[18px] font-semibold lg:font-semibold text-[#73327E]  ">
             WHAT IS CYTALUX®?
           </div>
-          <div className=" pt-2 pb-2 text-[18px] font-semibold text-[#73327E] ">
+          <div className=" text-[12px] lg:text-[18px] font-semibold lg:font-semibold text-[#73327E] pl-[100px] md:pl-[5rem] hidden md:block ">
             IMPORTANT SAFETY INFORMATION
           </div>
+          <button
+            className=" text-[#73327E] text-xl pl-[100px] md:pl-[100px] lg-[128px] xl:pl-[290px] "
+            onClick={() => setShowModal2(true)}
+          >
+            <MdAddCircle className=" w-6 h-6 " />
+          </button>
         </div>
       </Modal>
+
+      <Modal2 isVisible={showModal2} onClose={() => setShowModal2(false)}>
+        <div className="flex items-center justify-between p-2 ">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, porro
+          ullam maiores beatae harum aspernatur?
+        </div>
+        <button
+          className=" text-[#73327E] text-xl pl-[100px] md:pl-[100px] lg-[128px] xl:pl-[290px] "
+          onClick={() => setShowModal2(false)}
+        >
+          <HiMinusCircle className=" w-6 h-6 " />
+        </button>
+      </Modal2>
     </Fragment>
   );
 };
