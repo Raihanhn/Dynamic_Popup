@@ -6,29 +6,39 @@ import Modem from "./Modem";
 
 const PopupModem = () => {
   const [showModal, setShowModal] = useState(true);
+  const [currentState, setCurrentState] = useState("Model1");
 
   return (
     <Fragment>
       <Modem isVisible={showModal} onClose={() => setShowModal(false)}>
-        <div className="flex items-center justify-between p-2   ">
-          <div
-            className=" text-[12px] md:text-[12px] lg:text-[16px] xl:text-[18px] font-semibold  lg:font-semibold text-[#73327E]
-           pr-[60px] md:pr-[80px]  lg:pr-[100px] 2xl:pr-[200px] "
-          >
-            WHAT IS CYTALUX®?
+        <div className="bg-green-400">
+          <div className="">
+            {currentState === "Login" ? (
+              <>
+                <div className="text-red-400">h9</div>
+              </>
+            ) : (
+              <div className="text-purple-600">Hello world!</div>
+            )}
           </div>
-          <div
-            className=" text-[12px] md:text-[12px] lg:text-[16px] xl:text-[18px] font-semibold lg:font-semibold text-[#73327E]  
-            hidden md:block pl-[60px] md:pr-[80px] pr-[60px] md:pl-[80px] lg:pr-[100px] 2xl:pr-[100px] lg:pl-[100px] 2xl:pl-[100px] "
-          >
-            IMPORTANT SAFETY INFORMATION
-          </div>
-          <button
-            className=" text-[#73327E] text-xl pl-[60px] md:pl-[80px] lg:pl-[100px] 2xl:pl-[200px] "
-            // onClick={() => setShowModal2(true)}
-          >
-            <MdAddCircle className=" w-6 h-6  " />
+          <button>
+            {currentState === "Sign Up" ? "Create account" : "Login"}
           </button>
+          <div className="login-popup-condition">
+            <input type="checkbox" required />
+            <p>By continuing, i agree the terms of use & privacy policy.</p>
+          </div>
+          {currentState === "Login" ? (
+            <p>
+              Create a new account?{" "}
+              <span onClick={() => setCurrentState("Sign Up")}>-</span>
+            </p>
+          ) : (
+            <p>
+              Already have an account?{" "}
+              <span onClick={() => setCurrentState("Login")}>+</span>
+            </p>
+          )}
         </div>
       </Modem>
     </Fragment>
