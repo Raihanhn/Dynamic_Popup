@@ -12,21 +12,30 @@ const PopupModem = () => {
   return (
     <Fragment>
       <Modem isVisible={showModal} onClose={() => setShowModal(false)}>
-        <div className="bg-purple-600">
-          <div className="">
+        <div className="pl-[150px] ">
+          <div className="bg-amber-300 pt-4 pb-4 pr-4 pl-4 w-[90%]  ">
             {currentState === "Login" ? (
-              <>
-                <div className="text-white flex justify-between ">
-                  <h2>WHAT IS CYTALUX®?</h2>
-                  <h2>IMPORTANT SAFETY INFORMATION</h2>
-                </div>
-              </>
+              <div className="text-white flex items-center justify-between   ">
+                <h2 className=" ">WHAT IS CYTALUX®?</h2>
+
+                <h2 className=" ">IMPORTANT SAFETY INFORMATION</h2>
+                <button className="" onClick={() => setCurrentState("Sign Up")}>
+                  -
+                </button>
+              </div>
             ) : currentState === "model3" ? (
               <div className="text-blue-600">Another Model</div>
             ) : (
-              <div className="text-orange-300">Hello world!</div>
+              <>
+                <div className="text-orange-300">Hello world!</div>
+                <span onClick={() => setCurrentState("Login")}>+</span>
+                <button onClick={() => setCurrentState("model3")}>
+                  Switch to Model 3
+                </button>
+              </>
             )}
           </div>
+
           {/* <button
             onClick={() =>
               setCurrentState(currentState === "Sign Up" ? "Login" : "Sign Up")
@@ -35,20 +44,16 @@ const PopupModem = () => {
             {currentState === "Sign Up" ? "Create account" : "Login"}
           </button> */}
 
-          {currentState === "Login" ? (
-            <p>
-              <span onClick={() => setCurrentState("Sign Up")}>-</span>
-            </p>
+          {/* {currentState === "Login" ? (
+            <p></p>
           ) : (
             <p>
               {currentState !== "model3" && (
-                <button onClick={() => setCurrentState("model3")}>
-                  Switch to Model 3
-                </button>
+              
               )}
               <span onClick={() => setCurrentState("Login")}>+</span>
             </p>
-          )}
+          )} */}
 
           {/* Conditionally render the button to switch to "model3" state */}
         </div>
