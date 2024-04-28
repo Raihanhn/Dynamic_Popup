@@ -1,6 +1,7 @@
 import React from "react";
-import "./animatedborder.css";
-const AnimatedBorder = () => {
+import "./animatedborder2.css";
+
+const AnimatedBorder2 = () => {
   return (
     <div className="mid">
       <div className="animated-card">
@@ -10,4 +11,4 @@ const AnimatedBorder = () => {
   );
 };
 
-export default AnimatedBorder;
+export default AnimatedBorder2;

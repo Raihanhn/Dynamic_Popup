@@ -1,7 +1,7 @@
 .mid {
   display: grid;
   place-items: center;
-  margin: 0;
+  margin-top: 50px;
 }
 
 .animated-card {

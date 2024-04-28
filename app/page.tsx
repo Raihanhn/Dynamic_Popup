@@ -3,6 +3,8 @@ import Popup from "./components/Popup";
 import NewsTicker from "./components/NewsTicker/NewsTicker";
 import NewsTicker2 from "./components/NewsTicker2/NewsTicker2";
 import PopupModem from "./components/NewsTicker2/Modem/PopupModem";
+import AnimatedBorder from "./components/AnimatedBorder/AnimatedBorder";
+import AnimatedBorder2 from "./components/AnimatedBorder2/AnimatedBorder2";
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       <NewsTicker2 />
       <Popup /> */}
       hello
+      <AnimatedBorder />
+      <AnimatedBorder2 />
       <PopupModem />
     </div>
   );
