@@ -13,6 +13,7 @@
   justify-content: center;
   color: #fff;
   position: relative;
+  overflow: hidden;
 }
 
 .animated-card::before {
@@ -27,6 +28,18 @@
     #74ff51
   );
   animation: rotate 5s linear infinite;
+}
+
+.animated-card .inner {
+  position: absolute;
+  height: 280px;
+  width: 180px;
+  background: #222;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
 }
 
 @keyframes rotate {
