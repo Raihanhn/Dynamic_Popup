@@ -32,7 +32,7 @@ const PopupModem = () => {
               </div>
             ) : currentState === "model3" ? (
               <div className="flex justify-between ">
-                <div className=" leading-[26px] ">
+                <div className=" leading-[30px] mt-[20px] mb-[20px] ml-[100px] mr-[70px] overflow-y-auto h-[700px] ">
                   {/* <p className="text-[12px] md:text-[12px] lg:text-[16px] xl:text-[18px] font-semibold  text-[#73327E]"> */}
                   <p className=" font-semibold  text-[#73327E]">
                     {" "}
@@ -108,7 +108,7 @@ const PopupModem = () => {
                   <p>See full Prescribing Information for more details</p>
                 </div>
                 <button
-                  className="text-[#73327E] text-xl font-semibold "
+                  className="text-[#73327E] text-xl font-semibold mt-[-680px] "
                   onClick={() => setCurrentState("Sign Up")}
                 >
                   <HiMinusCircle className=" w-6 h-6 " />
@@ -116,8 +116,8 @@ const PopupModem = () => {
               </div>
             ) : (
               <div className="flex">
-                <div className="">
-                  <p className="text-[#73327E] text-[16px] font-semibold ">
+                <div className=" pr-[53px] ">
+                  <p className="text-[#73327E] text-[18px] font-semibold ">
                     {" "}
                     WHAT IS CYTALUX®?
                   </p>
@@ -130,7 +130,7 @@ const PopupModem = () => {
                   </p>
                 </div>
                 <div className="">
-                  <p className="text-[#73327E] text-[16px] font-semibold">
+                  <p className="text-[#73327E] text-[18px] font-semibold">
                     {" "}
                     IMPORTANT SAFETY INFORMATION
                   </p>
@@ -143,7 +143,7 @@ const PopupModem = () => {
                     and/or anti-nausea medication.
                   </p>
                 </div>
-                <div className="flex">
+                <div className="flex mt-[-120px] ">
                   <button
                     className="text-[#73327E] text-xl font-semibold "
                     onClick={() => setCurrentState("Login")}
