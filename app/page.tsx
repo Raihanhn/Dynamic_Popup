@@ -5,6 +5,7 @@ import NewsTicker2 from "./components/NewsTicker2/NewsTicker2";
 import PopupModem from "./components/NewsTicker2/Modem/PopupModem";
 import AnimatedBorder from "./components/AnimatedBorder/AnimatedBorder";
 import AnimatedBorder2 from "./components/AnimatedBorder2/AnimatedBorder2";
+import Imghover from "./components/ImgHover/Imghover";
 
 export default function Home() {
   return (
@@ -16,7 +17,8 @@ export default function Home() {
       hello
       <AnimatedBorder />
       <AnimatedBorder2 />
-      <PopupModem />
+      <Imghover />
+      {/* <PopupModem /> */}
     </div>
   );
 }
