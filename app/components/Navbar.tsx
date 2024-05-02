@@ -6,7 +6,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   return (
-    <div className="py-5 px-0 flex justify-between items-center fixed z-50 bg-white top-0 w-[80%] mx-auto">
+    <div className=" mt-[48px] py-5 px-0 flex justify-between items-center fixed z-50 bg-white top-0 w-[80%] mx-auto">
       <GiHummingbird className=" w-[40px] h-[40px] md:w-[40px] lg:w-[50px] md:h-[40px] lg:h-[50px] text-blue-500" />
       <div className=" ">
         <ul

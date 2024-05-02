@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Imghover = () => {
   return (
-    <div>
+    <div className="flex items-center justify-center">
       <div className="box">
         <Image
           className="img"
@@ -22,6 +22,7 @@ const Imghover = () => {
           width={100}
           height={100}
         />
+        <h1 className="img hover-title">Superman</h1>
       </div>
     </div>
   );

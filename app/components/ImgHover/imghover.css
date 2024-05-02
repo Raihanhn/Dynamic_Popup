@@ -34,3 +34,16 @@ body {
 .box:hover .img.hover-img {
   opacity: 1;
 }
+
+.hover-title {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  opacity: 0;
+  color: #fff;
+  font-size: 24px;
+}
+
+.box:hover .img.hover-title {
+  opacity: 1;
+}

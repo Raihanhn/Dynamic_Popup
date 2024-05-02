@@ -3,7 +3,7 @@ import "./newsticker.css";
 
 const NewsTicker = () => {
   return (
-    <div className="mt-14">
+    <div className="">
       <div className="news-container">
         <div className="title">Breaking News</div>
         <ul>
