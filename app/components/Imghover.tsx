@@ -1,7 +1,7 @@
 import React from "react";
 import "./imghover.css";
-import batman from "../../assets/batman.jpg";
-import spiderman from "../../assets/spiderman.png";
+import batman from "../assets/batman.jpg";
+import spiderman from "../assets/spiderman.png";
 import Image from "next/image";
 
 const Imghover = () => {
